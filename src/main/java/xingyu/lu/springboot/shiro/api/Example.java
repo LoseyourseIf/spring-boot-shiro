@@ -15,6 +15,22 @@ import xingyu.lu.springboot.shiro.utils.result.ResultModel;
 /**
  * @author xingyu.lu
  * @create 2019-06-06 11:42
+ * <p>
+ * RequiresAuthentication:
+ * 使用该注解标注的类，实例，方法在访问或调用时，当前Subject必须已经过认证。
+ * </p><p>
+ * RequiresGuest:
+ * 使用该注解标注的类，实例，方法在访问或调用时，当前Subject可以是“gust”身份，不需要经过认证。
+ * </p><p>
+ * RequiresPermissions:
+ * 当前Subject需要拥有某些特定的权限时，才能执行被该注解标注的方法。如果当前Subject不具有这样的权限，则方法不会被执行。
+ * </p><p>
+ * RequiresRoles:
+ * 当前Subject必须拥有所有指定的角色时，才能访问被该注解标注的方法。如果当天Subject不同时拥有所有指定角色，则方法不会执行还会抛出AuthorizationException异常。
+ * </p><p>
+ * RequiresUser
+ * 当前Subject必须是应用的用户，才能访问或调用被该注解标注的类，实例，方法。
+ * </p>
  **/
 @RestController
 public class Example {
