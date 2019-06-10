@@ -16,7 +16,7 @@ public class RestCtrlAdvice {
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     @ExceptionHandler(ShiroException.class)
     public ResultModel handleShiroException(ShiroException e) {
-        return ResultModel.commonError(e.getMessage());
+        return ResultModel.commonError("Un Authorized!");
     }
 
     @ResponseStatus(HttpStatus.UNAUTHORIZED)

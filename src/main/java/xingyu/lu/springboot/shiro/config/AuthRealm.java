@@ -12,6 +12,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import xingyu.lu.springboot.shiro.domain.UserExt;
 import xingyu.lu.springboot.shiro.service.UserService;
@@ -22,7 +23,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-@Service
+@Component
 public class AuthRealm extends AuthorizingRealm {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthRealm.class);

@@ -114,7 +114,6 @@ public class ResultModel<T> implements Serializable {
      * Token失效
      */
     public static ResultModel tokenError() {
-
         return new ResultModel(ErrorConstants.INVALID_TOKEN_CODE, ErrorConstants.INVALID_TOKEN_MSG);
     }
 
