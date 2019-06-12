@@ -1,5 +1,6 @@
 package xingyu.lu.springboot.shiro.api;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -60,6 +61,7 @@ public class Example {
 
     @RequestMapping("/401")
     public ResultModel unAuthorized() {
+        String token = (String) SecurityUtils.getSubject().getPrincipal();
         return ResultModel.customError(
                 String.valueOf(HttpStatus.UNAUTHORIZED.value()),
                 HttpStatus.UNAUTHORIZED.getReasonPhrase());
